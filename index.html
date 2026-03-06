@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ROSEYOBI MEDIA — Продвижение артистов. От демо до лейбла.">
+    <title>ROSEYOBI MEDIA</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Шумовой оверлей (эффект плёнки) -->
+    <div class="noise-overlay"></div>
+
+    <!-- Канвас для частиц -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- НАВИГАЦИЯ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="logo">ROSEYOBI</a>
+            <div class="nav-links">
+                <a href="#about">О нас</a>
+                <a href="#artists">Артисты</a>
+                <a href="#services">Услуги</a>
+                <a href="#contact" class="nav-cta">Связаться</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+        <div class="hero-ambient-1"></div>
+        <div class="hero-ambient-2"></div>
+
+        <div class="hero-inner">
+            <div class="hero-tag reveal-up" style="--delay: 0s">
+                <span class="tag-dot"></span>
+                Продвижение артистов в 2026
+            </div>
+
+            <h1 class="hero-title">
+                <span class="title-line reveal-chars" style="--delay: 0.1s">ROSEYOBI</span>
+                <span class="title-line reveal-chars" style="--delay: 0.2s">MEDIA</span>
+            </h1>
+
+            <p class="hero-sub reveal-up" style="--delay: 0.4s">
+                <span class="censored-wrap">Раз<span class="censor-block">████</span>ть</span> проще, чем кажется
+            </p>
+
+            <div class="hero-scroll-hint reveal-up" style="--delay: 0.6s">
+                <div class="scroll-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О НАС -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-label reveal-left">
+                    <span>01 — О нас</span>
+                </div>
+                <div class="about-body reveal-right">
+                    <h2 class="about-title">Мы знаем, как работает индустрия — изнутри.</h2>
+                    <p class="about-text">Индустрия жестокая. Большинство артистов не понимают, что делают не так — и
+                        гасятся в никуда. Мы придумали систему, которая проводит тебя от демо до контракта. Без воды,
+                        без потраченных лет.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-num" data-target="87">0</span><span class="stat-unit">%</span>
+                            <p class="stat-label">артистов получают прирост стримов</p>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num" data-target="40">0</span><span class="stat-unit">+</span>
+                            <p class="stat-label">успешных релизов</p>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num" data-target="12">0</span><span class="stat-unit">×</span>
+                            <p class="stat-label">средний рост аудитории</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОЧЕМУ МЫ -->
+    <section id="why" class="section why">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">02 — Почему мы</span>
+                <h2 class="section-title">Не агентство. Система.</h2>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card glass reveal-up" style="--delay: 0s">
+                    <div class="why-icon">🔍</div>
+                    <h3>Аналитика</h3>
+                    <p>Строим стратегию на данных, трендах и реальных кейсах. Не гадаем.</p>
+                </div>
+                <div class="why-card glass reveal-up" style="--delay: 0.1s">
+                    <div class="why-icon">⚡</div>
+                    <h3>Скорость</h3>
+                    <p>Быстрые релизы и мгновенная реакция на изменения рынка.</p>
+                </div>
+                <div class="why-card glass reveal-up" style="--delay: 0.2s">
+                    <div class="why-icon">🤝</div>
+                    <h3>Связи</h3>
+                    <p>Прямые выходы на ключевые лейблы, кураторов и медиа.</p>
+                </div>
+                <div class="why-card glass reveal-up" style="--delay: 0.3s">
+                    <div class="why-icon">🎯</div>
+                    <h3>Точность</h3>
+                    <p>Индивидуальная стратегия для каждого артиста — ноль шаблонов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- РАЗ****ЛИ С НАМИ -->
+    <section id="artists" class="section artists">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">03 — Клиенты</span>
+                <h2 class="section-title">
+                    Раз<span class="censor-inline">████</span>ли с нами
+                </h2>
+            </div>
+        </div>
+
+        <div class="artists-track-wrap">
+            <div class="artists-track" id="artistsTrack">
+                <!-- Карточки -->
+                <div class="artist-card glass">
+                    <div class="artist-img gradient-bg-1"></div>
+                    <div class="artist-info">
+                        <h3>Артист 1</h3>
+                        <p>Hip-Hop / R&B</p>
+                    </div>
+                </div>
+                <div class="artist-card glass">
+                    <div class="artist-img gradient-bg-2"></div>
+                    <div class="artist-info">
+                        <h3>Артист 2</h3>
+                        <p>Pop / Electronic</p>
+                    </div>
+                </div>
+                <div class="artist-card glass">
+                    <div class="artist-img gradient-bg-3"></div>
+                    <div class="artist-info">
+                        <h3>Артист 3</h3>
+                        <p>Phonk</p>
+                    </div>
+                </div>
+                <div class="artist-card glass">
+                    <div class="artist-img gradient-bg-4"></div>
+                    <div class="artist-info">
+                        <h3>Артист 4</h3>
+                        <p>Indie / Alt</p>
+                    </div>
+                </div>
+                <div class="artist-card glass">
+                    <div class="artist-img gradient-bg-5"></div>
+                    <div class="artist-info">
+                        <h3>Артист 5</h3>
+                        <p>Trap / Rap</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Индикаторы прокрутки -->
+        <div class="slider-dots" id="sliderDots"></div>
+    </section>
+
+    <!-- ПАКЕТЫ УСЛУГ -->
+    <section id="services" class="section services">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">04 — Услуги</span>
+                <h2 class="section-title">Выбери свой уровень</h2>
+            </div>
+
+            <div class="packages">
+                <!-- Малой -->
+                <div class="pkg glass reveal-up" style="--delay: 0s">
+                    <div class="pkg-top">
+                        <span class="pkg-emoji">👦</span>
+                        <h3 class="pkg-name">Малой</h3>
+                        <p class="pkg-desc">Для первого выхода. Быстро, чётко.</p>
+                    </div>
+                    <ul class="pkg-list">
+                        <li>Разбор 1 трека</li>
+                        <li>Базовая упаковка артиста</li>
+                        <li>Дистрибуция во все площадки</li>
+                    </ul>
+                </div>
+
+                <!-- Взлетаем -->
+                <div class="pkg glass pkg-featured reveal-up" style="--delay: 0.15s">
+                    <div class="pkg-badge">Популярный</div>
+                    <div class="pkg-glow"></div>
+                    <div class="pkg-top">
+                        <span class="pkg-emoji">🚀</span>
+                        <h3 class="pkg-name">Взлетаем</h3>
+                        <p class="pkg-desc">Полноценный рост аудитории и охватов.</p>
+                    </div>
+                    <ul class="pkg-list">
+                        <li>Всё из "Малого"</li>
+                        <li>Стратегия продвижения</li>
+                        <li>Таргетированная реклама</li>
+                        <li>Питчинг в плейлисты</li>
+                    </ul>
+                </div>
+
+                <!-- Босс -->
+                <div class="pkg glass reveal-up" style="--delay: 0.3s">
+                    <div class="pkg-top">
+                        <span class="pkg-emoji">🎩</span>
+                        <h3 class="pkg-name">Босс</h3>
+                        <p class="pkg-desc">От демо до подписания контракта.</p>
+                    </div>
+                    <ul class="pkg-list">
+                        <li>Всё из "Взлетаем"</li>
+                        <li>Прямой выход на лейблы</li>
+                        <li>PR и работа с блогерами</li>
+                        <li>Личное кураторство</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- КОНТАКТ -->
+    <section id="contact" class="section contact">
+        <div class="contact-ambient"></div>
+        <div class="container">
+            <div class="contact-inner reveal-up">
+                <h2 class="contact-title">Готов начать?</h2>
+                <p class="contact-sub">Переходи в Telegram — расскажи про себя, и мы подберём подходящий пакет.</p>
+                <a href="https://t.me/placeholder_bot" target="_blank" class="tg-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.19-.08-.05-.19-.02-.27 0-.12.03-1.95 1.25-5.5 3.65-.52.36-.99.53-1.4.52-.46-.01-1.33-.26-1.98-.48-.8-.27-1.43-.42-1.37-.89.03-.25.38-.51 1.03-.78 4.04-1.76 6.74-2.92 8.09-3.48 3.85-1.6 4.64-1.88 5.17-1.89.11 0 .37.03.54.17.14.12.18.28.2.42.02.16.02.32 0 .42z" />
+                    </svg>
+                    Написать в Telegram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ФУТЕР -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span class="footer-logo">ROSEYOBI MEDIA</span>
+            <span class="footer-copy">© 2026</span>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
